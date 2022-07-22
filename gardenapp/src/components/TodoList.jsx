@@ -8,7 +8,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 const TodoList = () => {
   const [inputValue, setInputValue] = useState('');
-  const [resetInput, setResetInput] = useState('');
   const [renderTaskList, setRenderTaskList] = useState([]);
 
   //Capture the onChange value of the input field
