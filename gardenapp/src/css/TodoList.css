@@ -1,0 +1,53 @@
+.inputBtn {
+  font-size: 10px;
+  color: red;
+  margin-bottom: 0.3rem;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin: auto;
+}
+
+.task-container {
+  margin: 1rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task-item {
+  list-style: none;
+  margin: auto;
+  width: 20%;
+  margin-top: 0.5rem;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+#taskInputField {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#deleteBtn {
+  color: red;
+  cursor: pointer;
+}
+
+#editBtn {
+  cursor: pointer;
+}
+
+#task-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks-heading {
+  margin-top: 3rem;
+}
