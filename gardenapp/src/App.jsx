@@ -1,11 +1,10 @@
 import './App.css';
 import './css/Links.css';
-import TodoList from './components/TodoList';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
-// import About from './components/About';
 import Welcome from './components/Welcome';
-import CryptoPriceTracker from './components/CryptoPriceTracker';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,17 +16,16 @@ function App() {
           </Link>
         </div>
         <div className="links">
-          <Link to="/todolist">Todolist</Link>
-          <Link to="/crypto-price-tracker">Crypto Price Tracker</Link>
-          {/* <Link to="/about">About</Link> */}
+          <Link to="/">Welcome</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </nav>
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/todolist" element={<TodoList />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<ErrorPage />} />
-        {/* <Route path="/about" element={<About />} /> */}
-        <Route path="/crypto-price-tracker" element={<CryptoPriceTracker />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
