@@ -1,0 +1,14 @@
+#crypto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-link {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  margin: auto;
+}
