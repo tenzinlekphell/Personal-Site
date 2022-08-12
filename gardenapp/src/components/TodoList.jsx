@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/TodoList.css';
+import '../App.css';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -42,16 +43,25 @@ const TodoList = () => {
   };
 
   return (
-    <div>
-      <h1>Organizer Application</h1>
+    <div className="app">
       <form onSubmit={addTask}>
         <div className="inputForm">
+          {renderTaskList.length > 0 ? (
+            <h6 className="tasks-heading">
+              Tasks To Do: {renderTaskList.length}{' '}
+            </h6>
+          ) : (
+            <h6 className="tasks-heading">
+              No Tasks. Would You Like To Add A Task?
+            </h6>
+          )}
           <input
             onChange={onChange}
             type="text"
             placeholder="Add a task"
             id="taskInputField"
           />
+
           <Button onClick={addTask} variant="primary" className="inputBtn">
             Add Task
           </Button>
@@ -64,13 +74,7 @@ const TodoList = () => {
           </Button>
         </div>
       </form>
-      {renderTaskList.length > 0 ? (
-        <h6 className="tasks-heading">Tasks To Do: {renderTaskList.length} </h6>
-      ) : (
-        <h6 className="tasks-heading">
-          No Tasks. Would You Like To Add A Task?
-        </h6>
-      )}
+
       {renderTaskList.map((task, id) => {
         return (
           <ListGroup key={id} className="task-container">
